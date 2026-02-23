@@ -26,9 +26,11 @@ A modern React-based book tracking application that helps users manage their per
 - **State Management:** React Hooks
 - **Storage:** Browser LocalStorage
 
+---
+
 ## 📸 Screenshots
 
----<img width="2704" height="1582" alt="Screenshot 2026-02-23 210444" src="https://github.com/user-attachments/assets/b63d5724-6253-4ee9-8c9d-4a59d1d1c132" />
+<img width="2704" height="1582" alt="Screenshot 2026-02-23 210444" src="https://github.com/user-attachments/assets/b63d5724-6253-4ee9-8c9d-4a59d1d1c132" />
 <img width="2702" height="1572" alt="Screenshot 2026-02-23 210426" src="https://github.com/user-attachments/assets/ea89eeeb-1eb2-478f-97c8-0f58ba638d96" />
 <img width="2694" height="1577" alt="Screenshot 2026-02-23 210411" src="https://github.com/user-attachments/assets/48c97a44-e96c-42fe-9276-e92458433011" />
 <img width="2702" height="1584" alt="Screenshot 2026-02-23 210354" src="https://github.com/user-attachments/assets/f05a8291-d43c-453d-9bb2-3428216a6443" />
@@ -41,16 +43,16 @@ A modern React-based book tracking application that helps users manage their per
 ## 🛠 Installation & Setup
 
 Clone the repository:
-git clone https://github.com/yourusername/your-repo-name.git
+  git clone https://github.com/yourusername/your-repo-name.git
 
 Navigate into the project:
-cd your-repo-name
+  cd your-repo-name
 
 Install dependencies:
-npm install
+  npm install
 
 Start development server:
-npm run dev
+  npm run dev
 
 or (if using CRA)
 npm start
