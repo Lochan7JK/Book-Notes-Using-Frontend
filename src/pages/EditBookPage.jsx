@@ -63,9 +63,6 @@ export default function EditBookPage({ books, updateBook }) {
       >
         ← Back
       </button>
-      {/* <h1 className="text-2xl font-semibold mb-6">
-        Edit Book
-      </h1> */}
 
       <form
         onSubmit={handleSubmit}
@@ -122,7 +119,6 @@ export default function EditBookPage({ books, updateBook }) {
           >
             <option>Reading</option>
             <option>Finished</option>
-            {/* <option>Planned</option> */}
           </select>
 
           <select
@@ -147,3 +143,4 @@ export default function EditBookPage({ books, updateBook }) {
     </div>
   );
 }
+
