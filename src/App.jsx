@@ -1,23 +1,3 @@
-// import Navbar from "./components/Navbar";
-// import LibraryPage from "./pages/LibraryPage";
-// import { Routes, Route } from "react-router-dom";
-// import AddBookPage from "./pages/AddBookPage";
-
-// function App() {
-//   return (
-//     <div className="min-h-screen bg-slate-100">
-//       <Navbar />
-//       <Routes>
-//         <Route path="/" element={<LibraryPage />} />
-//         <Route path="/add" element={<AddBookPage />} />
-//       </Routes>
-//     </div>
-//   );
-// }
-
-// export default App;
-
-
 import { Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -40,7 +20,7 @@ export default function App() {
   const [searchQuery, setSearchQuery] = useState("");
   const location = useLocation();
 
-  // Optionally, we can have a separate state for the raw input to implement debouncing
+  /* Optionally, we can have a separate state for the raw input to implement debouncing */
   const [rawSearch, setRawSearch] = useState("");
 
   useEffect(() => {
@@ -50,15 +30,13 @@ export default function App() {
 
     return () => clearTimeout(timer);
   }, [rawSearch]);
-  // Optionally, we can have a separate state for the raw input to implement debouncing
 
 
   const processedBooks = books
   .filter((book) => {
-    // const status = book.status?.toLowerCase();
     if (filter === "reading") return book.status === "reading";
     if (filter === "finished") return book.status === "finished";
-    return true; // all
+    return true; 
   })
   .filter((book) =>
     book.title.toLowerCase().includes(searchQuery.toLowerCase())
