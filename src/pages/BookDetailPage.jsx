@@ -3,7 +3,6 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import DefaultCover from "../assets/default-book-cover.png";
 import PlaceholderCover from "../components/PlaceholderCover";
-// import DeleteModal from "../components/DeleteModal";
 
 
 export default function BookDetailPage({ books, deleteBook }) {
@@ -43,19 +42,6 @@ const hasCover = book.coverUrl && book.coverUrl.trim() !== "";
 
 
                 <div className="w-60 h-90 bg-[#fef7f2] rounded-lg overflow-hidden flex-shrink-0">
-                    {/* {book.coverUrl ? (
-                        <img
-                            src={book.coverUrl || defaultCover}
-                            alt={book.title}
-                            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                            onError={(e) => {
-                            e.target.src = defaultCover;
-                        }}
-                        />
-                     ) : (
-                        <PlaceholderCover title={book.title} />
-                    )} */}
-
                     {hasCover ? (
                         <img
                             src={book.coverUrl || DefaultCover}
@@ -80,7 +66,7 @@ const hasCover = book.coverUrl && book.coverUrl.trim() !== "";
                 </div>
 
                 <div className="text-xs text-stone-500 space-y-1 pt-2">
-                    {/* <p>ISBN: {book.isbn || "Not provided"}</p> */}
+                   
                     <p>Created At: {formatDateTime(book.createdAt)}</p>
                     <p>
                         Last Updated:{" "}
@@ -98,11 +84,6 @@ const hasCover = book.coverUrl && book.coverUrl.trim() !== "";
             <p className="text-sm">Status: {book.status}</p>
             <p className="text-sm">Rating: {book.rating} ⭐</p>
             <p className="text-sm">ISBN: {book.isbn || "Not provided"}</p>
-            {/* <p className="text-sm">Created At: {formatDateTime(book.createdAt)}</p>
-            <p className="text-sm">
-                Last Updated:{" "}
-                {book.updatedAt ? formatDateTime(book.updatedAt) : "Never"}
-            </p> */}
 
             {book.notes && (
                 <div>
@@ -118,17 +99,6 @@ const hasCover = book.coverUrl && book.coverUrl.trim() !== "";
                 >
                     Edit
                 </button>
-
-                {/* INSTANT DELETE BUTTON WITHOUT WARNING MODAL */}
-                {/* <button
-                    onClick={() => {
-                    deleteBook(book.id);
-                    navigate("/");
-                    }}
-                    className="px-4 py-2 text-sm rounded-lg border"
-                >
-                    Delete
-                </button> */}
 
                 <button
                     onClick={() => setShowDelete(true)}
@@ -194,17 +164,9 @@ const hasCover = book.coverUrl && book.coverUrl.trim() !== "";
         </motion.div>
         )}
     </AnimatePresence>
-
-    {/* <DeleteModal
-        book={selectedBook}
-        onClose={() => setSelectedBook(null)}
-        onConfirm={() => {
-            deleteBook(selectedBook.id);
-            setSelectedBook(null);
-        }}
-    /> */}
     
 
     </div>
   );
 }
+
