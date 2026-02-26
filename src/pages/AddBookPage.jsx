@@ -13,10 +13,6 @@ export default function AddBookPage({ addBook }) {
   });
 
   const cleanISBN = (isbn) => isbn?.replace(/[-\s]/g, "");
-//   const coverSources = [
-//     `https://covers.openlibrary.org/b/isbn/${isbn}-L.jpg`,
-//     `https://books.google.com/books/content?vid=ISBN:${isbn}&printsec=frontcover&img=1&zoom=1`,
-//   ];
 
 
   function handleChange(e) {
@@ -29,7 +25,6 @@ export default function AddBookPage({ addBook }) {
   function handleSubmit(e) {
     e.preventDefault();
 
-    // const isbn = form.isbn?.trim();
     const isbn = cleanISBN(form.isbn?.trim());
 
     const newBook = {
@@ -60,10 +55,6 @@ export default function AddBookPage({ addBook }) {
         ← Back
       </button>
 
-
-      
-
-      {/* <h1 className="text-2xl font-semibold mb-6">Add Book</h1> */}
 
       <form
         onSubmit={handleSubmit}
@@ -120,3 +111,4 @@ export default function AddBookPage({ addBook }) {
     </div>
   );
 }
+
